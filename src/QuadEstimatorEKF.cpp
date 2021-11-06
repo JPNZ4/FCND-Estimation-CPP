@@ -168,16 +168,15 @@ VectorXf QuadEstimatorEKF::PredictState(VectorXf curState, float dt, V3F accel, 
 
   ////////////////////////////// BEGIN STUDENT CODE ///////////////////////////
 
-  predictedState(0) = curState(0) + curState(3) * dt; // x coordianate x= x + x_dot * dt
-  predictedState(1) = curState(1) + curState(4) * dt; // y coordianate y= y + y_dot * dt
-  predictedState(2) = curState(2) + curState(5) * dt; // z coordianate z= z + z_dot * dt
+  predictedState(0) = curState(0) + curState(3) * dt;
+  predictedState(1) = curState(1) + curState(4) * dt;
+  predictedState(2) = curState(2) + curState(5) * dt;
 
-  //Convert the true acceleration from body frame to the inertial frame
   V3F acc_inertial = attitude.Rotate_BtoI(accel);
 
-  predictedState(3) = curState(3) + acc_inertial.x * dt; // change in velocity along the x is a_x * dt
-  predictedState(4) = curState(4) + acc_inertial.y * dt; // change in velocity along the y is a_y * dt 
-  predictedState(5) = curState(5) + acc_inertial.z * dt - CONST_GRAVITY * dt; // change in velocity along the z is a_z * dt by removing the gravity component
+  predictedState(3) = curState(3) + acc_inertial.x * dt;
+  predictedState(4) = curState(4) + acc_inertial.y * dt; 
+  predictedState(5) = curState(5) + acc_inertial.z * dt - CONST_GRAVITY * dt;
 
   /////////////////////////////// END STUDENT CODE ////////////////////////////
 
