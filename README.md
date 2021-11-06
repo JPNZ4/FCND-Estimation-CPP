@@ -7,7 +7,7 @@
 
 ```
 
-![scenario 06](images/06.jpg)
+![scenario 06](images/06.JPG)
 
 ## Step 2: Attitude Estimation
 
@@ -16,7 +16,7 @@
 - PASS: ABS(Quad.Est.E.MaxEuler) was less than 0.100000 for at least 3.000000 seconds
 ```
 
-![scenario 07](images/07.jpg)
+![scenario 07](images/07.JPG)
 
 ## Step 3: Prediction Step
 
@@ -24,8 +24,8 @@
 - Implemented ```GetRbgPrime()``` method in QuadEstimatorEKF.cpp (line 207)
 - Tuned QPosXYStd and QVelXYStd in QuadEstimatorEKF.txt
 
-![scenario 08](images/08.jpg)
-![scenario 09](images/09.jpg)
+![scenario 08](images/08.JPG)
+![scenario 09](images/09.JPG)
 
 ## Step 4: Magnetometer Update
 
@@ -36,7 +36,7 @@
 - PASS: ABS(Quad.Est.E.Yaw-0.000000) was less than Quad.Est.S.Yaw for 75% of the time
 ```
 
-![scenario 10](images/10.jpg)
+![scenario 10](images/10.JPG)
 
 ## Step 5: Closed Loop + GPS Update
 
@@ -45,7 +45,7 @@
 - PASS: ABS(Quad.Est.E.Pos) was less than 1.000000 for at least 20.000000 seconds
 ```
 
-![scenario 11](images/11.jpg)
+![scenario 11](images/11.JPG)
 
 ## Step 6: Adding Your Controller
 
